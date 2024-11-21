@@ -1,0 +1,101 @@
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 200px;
+    height: 50px;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+    
+  /* Create two columns that float next to eachother */
+  .column {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+    padding: 20px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+ 
+  .col-8{
+    text-align: center;
+    color: #0a0101;
+    margin: 25px;
+  }
+  
+  .contact-section {
+    color: rgb(17, 17, 17);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #021012;
+ }
+  
+  .contact-container{
+    flex: 1 1 30%;
+    margin: 10px;
+    min-width: 200px;
+    background-color: #E2F4FD;
+    color: rgb(17, 2, 2);
+    justify-content: space-around;
+    padding: 20px; 
+    border-radius: 8px;
+ 
+ }
+ .Address {
+     margin: 10px;
+     padding: 15px;
+ }
+ .email {
+     margin: 10px;
+     padding: 15px;
+ }
+ .call {
+     margin: 10px;
+     padding: 15px;
+ } 
+   /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+   @media screen and (max-width: 600px) {
+     .column, input[type=submit] {
+       width: 100%;
+       margin-top: 0;
+     }
+   }
+ 
+   @media(min-width:760px){
+     body{
+         flex: 1 1 30%;
+     }
+ }
+ /*small screens <760px*/
+ @media(max-width:760px){
+     body{
+         flex: 1 1 45%;
+     }
+ }
+ @media(max-width:480px){
+     body{
+         flex: 1 1 100%;
+     }
+ }

@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root {
+    --primary-color: #f7c703;
+    --text-dark: #030303;
+    --text-light: #676767;
+    --white: #ffffff;
+    --max-width: 1200px;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color:aliceblue;
+}
+.principle {
+    background-color: rgba(255, 255, 255, 0.842);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-radius: 8px; 
+    margin: 10px;
+}
+.principle1 {
+    width: 75%;
+    height: 400px;
+    border-radius: 8px;  
+}
+
+.card2 {
+    background-color: rgba(255, 255, 255, 0.842);
+    margin: 20px;
+    border-radius: 8px;
+    flex: 1 1 30%;
+   display: flex;
+}
+
+#principle-message {
+    display: block;
+    font-size: large;
+}
+.about {
+    margin-top: 10px;
+    text-align: left;
+}
+.welcome-principle {
+    text-align: center;
+    color: var(--text-dark);
+    font-size: large;
+}
+/*
+.slides {
+    max-width: 450px;
+    position: relative;
+    margin: auto;
+    box-sizing: border-box;    
+}
+.myslide {
+    margin: 20px;
+    border-radius: 8px;
+    flex: 1 1 30%;
+   display: flex;
+}
+
+.prev, .next {
+    cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+
+/* The dots/bullets/indicators 
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+   .dot:hover {
+    background-color: #717171; 
+  }
+  
+  
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  #img-about {
+    border-radius: 8px;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  */
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    margin: 10px;
+  }
+  .card-main {
+    height: auto;
+    width: 100%;
+    margin: 10px;
+    
+    border-radius: 10px;
+  }
+  .grid-img {
+    height: auto;
+    width: 100%;
+    border-radius: 10px;
+
+  }
+  .grid-item {
+    padding: 10px;
+  }
+  h5 {
+    text-align: center;
+    padding: 5px;
+  }
+  p {
+    justify-content: right;
+  }
+  @media (max-width: 768px){
+    .flex-item{
+        flex: 1 1 45%; /*maximum of 2 items on row*/
+    }
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media(max-width:480px){
+    .flex-item{
+        flex: 1 1 100%; /* one item per row*/
+    }
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

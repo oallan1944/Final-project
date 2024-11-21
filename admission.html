@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" 
+          content="width=device-width,
+                   initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="admission.css?ver=100">
+   
+    
+    <link href="assets/img/logo.jpg" rel="icon">
+    <title>Admissions</title>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <img src="Assets/img/logo.jpg" class ="logo" alt="Nkumba high school">
+            <ul>
+                <li><a class="active" href="Index.html">Home</a></li>
+                <li><a href="About.html">About Us</a></li>
+                <li><a href="learning.html">Learning</a></li>
+                <li><a href="admission.html">Admissions</a></li>           
+                <li><a href="#">Careers</a></li>            
+                <li><a href="#">News and Updates</a></li>
+               <li><a href="enquiries.html"  class="btn2">Enquire</a></li>            
+            </ul>
+        </nav>
+    <div class="join">
+        Student Registeration Form
+    </div>
+    <!--<section class="photo-school">
+        
+    </section> 
+    <section class="container-admission">
+        <div class="img-admission">
+            <img src="Assets/img/school.png" class="admission-photo" alt="main building">
+        </div>
+    </section>-->
+        
+       
+        <form class="admission-form">
+            <div class="form1">
+            <div>
+                <label for="firstName" >First Name :</label><br>
+            <input type="text" id="firstName" name="firstName" required> <br>
+            </div>
+            <div>
+                <label for="lastName" >Other Names :</label><br>
+                <input type="text" id="lastName" name="lastName" required><br>
+            </div>
+            <div>
+                <label for="sponser" >Name of Sponsor :</label><br>
+                <input type="text" id="sponser" name="sponser" required><br>
+            </div>
+            <div>
+                <label for="dob">Date of Birth</label><br>
+                <input type="date" id="dob" name="dob" required><br>
+            </div>
+            <div>
+                <label for="email" >Email :</label><br>
+                <input type="email" id="email" name="email"><br>
+            </div>
+            <p class="gender">Gender</p>
+            <input type="radio" name="gender" value="male">
+            <label for="gender">MALE</label><BR>
+            <input type="radio" name="gender" value="female">
+            <label for="gender">FEMALE</label><BR>
+            
+            <div>
+                <label class="class-joining">Choose Class:</label>
+           <select>
+            <option>Choose option</option>
+            <option>Senior One</option>
+            <option>Senior Two</option>
+            <option>Senior Three</option>
+            <option>Senior Four</option>
+            <option>Senior Five</option>
+            <option>Senior Six</option>
+           </select><br>
+            </div>
+            <div>
+            <label id="previous-school">Name of Previous School :</label><br>
+           <input type="text" for="previous-school" name="previous-school" required><br>
+            </div>
+            <div>
+            <label class="document">Attach Report from Previous School</label>
+           <input type="file" for="document" name="document"> <br>
+            </div>
+            <div>
+                <label id="hobbies">Hobbies : </label>
+                <label id="hobby">Football </label>
+                <input type="checkbox" for="football">
+                <label id="hobby">Netball </label>
+                <input type="checkbox" for="netball">
+                <label id="hobby">Volleyball </label>
+                <input type="checkbox" for="volleyball">
+                <label id="hobby"> Debate</label>
+                <input type="checkbox" for="debate">
+                <label id="hobby">Running </label>
+                <input type="checkbox" for="running">
+                <label id="hobby">Others </label>
+                <input type="checkbox" for="others"><br>
+            </div>
+            <button type="submit" class="admission-btn">Submit</button>
+        </div>
+        </form>
+        
+    
+</body>
+
+</html>
