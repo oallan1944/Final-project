@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');// capturing form data
 const session = require('express-session'); //session managment
 const MySQLStore = require('express-mysql-session')(session); //session managment
 const dotenv = require('dotenv'); //
+const path = require('path')
 //initialize session management
 
 dotenv.config();
@@ -13,7 +14,7 @@ const app = express();
 
 
 //configure middleware
-
+app.use(express.static(path.join(__dirname,'frontend')));
 app.use(bodyParser.json()); //use json
 app.use(bodyParser.urlencoded({ extended: true})); //capture form data
 
@@ -33,7 +34,9 @@ app.use(session({
 }));
 
 app.use('/school/api/users', require('./routes/userRoutes'));
-
+app.get('*', () => {
+    resizeBy.sendFile(path.join(__durname, 'frontend', '../Templates/index.html'));
+})
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () =>{

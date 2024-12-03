@@ -70,3 +70,29 @@ const allInputs = [fullname_input, email_input, password_input, repeat_password_
        } 
     })
  })
+
+ //registerstion form submit
+ document.getElementById('form').addEventListener('submit', async (e) => {
+
+  e.preventDefault();
+  const name = document.getElementById('fullname-input').value;
+  const email = document.getElementById('email-input').value;
+  const password = document.getElementById('password-input').value;
+
+  //transmit the data
+
+  const response = await fetch('/school/api/users/register', {
+    method: 'POST',
+    headers: {
+      'content-type': 'application/json'
+    },
+    body: JSON.stringify({ name, email, password})
+  });
+
+  const result = await response.json();
+  if(result.status ===201){
+    showMessage('successes ', result.message);
+  }else{
+    showMessage('error', result.message)
+  }
+ });
